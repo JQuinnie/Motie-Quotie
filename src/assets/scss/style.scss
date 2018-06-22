@@ -1,0 +1,11 @@
+$color-black: #000000;
+$color-white: white;
+$border-style: 1px solid red;
+
+.container {
+  border: $border-style;
+  text-align: center;
+  h1 {
+    font-size: 3em;
+  }
+}
