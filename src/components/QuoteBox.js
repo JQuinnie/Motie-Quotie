@@ -31,7 +31,7 @@ class QuoteBox extends React.Component {
       <div class="container">
         <div class="row">
           <div className="col">
-            <h1>This is the container to test quotes</h1>
+            <h2>This is the container to test quotes</h2>
             <p>{this.state.email}</p>
           </div>
         </div>
