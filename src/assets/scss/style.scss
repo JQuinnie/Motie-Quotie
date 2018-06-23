@@ -1,10 +1,18 @@
 $color-black: #000000;
 $color-white: white;
+$color-grey: #888888;
+$font-header: 'Patrick Hand SC', cursive;
+$font-quote: 'Alegreya Sans SC', sans-serif;
 $border-style: 1px solid red;
 
 .container {
   border: $border-style;
   text-align: center;
+  font-family: $font-quote;
+  header {
+    background-color: $color-grey;
+    font-family: $font-header;
+  }
   h1 {
     font-size: 3em;
   }
