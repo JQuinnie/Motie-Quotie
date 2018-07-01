@@ -1,24 +1,46 @@
 import React from "react";
+import unirest from "unirest";
 
 class QuoteBox extends React.Component {
   constructor() {
     super();
     this.state = {
-      email: []
+      quote: "",
+      author: ""
     };
   }
 
+  // componentDidMount() {
+  //   fetch("https://randomuser.me/api/?results=10")
+  //     .then(results => {
+  //       return results.json();
+  //     })
+  //     .then(data => {
+  //       let email = data.results.map(mail => {
+  //         return <div key={mail.results}>{mail.email}</div>;
+  //       });
+  //       this.setState({ email: email });
+  //       console.log("state", this.state.email);
+  //     });
+  // }
+
   componentDidMount() {
-    fetch("https://randomuser.me/api/?results=10")
-      .then(results => {
-        return results.json();
-      })
-      .then(data => {
-        let email = data.results.map(mail => {
-          return <div key={mail.results}>{mail.email}</div>;
+    let data = [];
+    unirest
+      .get("https://quotes.p.mashape.com/?category=motivational")
+      .header(
+        "X-Mashape-Key",
+        "dAjNdbLtlrmshbT9kg80hF0BvWWvp1MsfD0jsnG9VJgmo8lo9T"
+      )
+      .header("Accept", "application/json")
+      .end(result => {
+        console.log(result.body);
+        data = result.body;
+
+        this.setState({
+          quote: data.quote,
+          author: data.author
         });
-        this.setState({ email: email });
-        console.log("state", this.state.email);
       });
   }
 
@@ -28,12 +50,12 @@ class QuoteBox extends React.Component {
         <h2>This is the container to test quotes</h2>
         <div className="row">
           <div className="col">
-            <p id="text">{this.state.email}</p>
+            <p id="text">{this.state.quote}</p>
           </div>
         </div>
         <div className="row">
           <div className="col">
-            <p id="author">some author</p>
+            <p id="author">-{this.state.author}</p>
           </div>
         </div>
       </div>
