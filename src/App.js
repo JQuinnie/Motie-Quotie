@@ -1,8 +1,6 @@
-import React from 'react';
-import logo from './logo.svg';
-import './assets/css/style.css';
-import randGen from './logic.js';
-import QuoteBox from './components/QuoteBox';
+import React from "react";
+import "./assets/css/style.css";
+import QuoteBox from "./components/QuoteBox";
 
 class App extends React.Component {
   render() {
@@ -12,12 +10,14 @@ class App extends React.Component {
           <h1 className="App-title">Welcome to Motie-Quotie</h1>
         </header>
         <QuoteBox />
-        <p className="text">
-          {randGen.quote}
-          <br />
-          {randGen.author}
-        </p>
-        <button type="button" class="btn btn-secondary">New Quote</button>
+        <button type="button" className="btn btn-secondary" id="new-quote">
+          New Quote
+        </button>
+        <a href="http://www.twitter.com/intent/tweet">
+          <button type="button" className="btn btn-primary" id="tweet-quote">
+            Tweet Quote
+          </button>
+        </a>
       </div>
     );
   }
