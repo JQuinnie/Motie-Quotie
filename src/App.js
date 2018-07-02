@@ -10,15 +10,13 @@ class App extends React.Component {
       quote: "",
       author: ""
     };
-
-    this.fetchQuote = this.fetchQuote.bind(this);
   }
 
   componentDidMount() {
     this.fetchQuote();
   }
 
-  fetchQuote() {
+  fetchQuote = () => {
     let data = [];
     unirest
       .get("https://quotes.p.mashape.com/?category=motivational")
@@ -36,7 +34,7 @@ class App extends React.Component {
           author: data.author
         });
       });
-  }
+  };
 
   render() {
     return (
