@@ -18,7 +18,7 @@ class App extends React.Component {
     this.fetchQuote();
   }
 
-  fetchQuote = () => {
+  fetchQuote() {
     let data = [];
     unirest
       .get("https://quotes.p.mashape.com/?category=motivational")
@@ -36,7 +36,7 @@ class App extends React.Component {
           author: data.author
         });
       });
-  };
+  }
 
   render() {
     return (
