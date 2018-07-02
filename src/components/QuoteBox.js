@@ -4,15 +4,14 @@ class QuoteBox extends React.Component {
   render() {
     return (
       <div className="container" id="quote-box">
-        <h2>This is the container to test quotes</h2>
         <div className="row">
           <div className="col">
-            <p id="text">{this.props.quote}</p>
+            <h2 id="text">{this.props.quote}</h2>
           </div>
         </div>
         <div className="row">
           <div className="col">
-            <p id="author">-{this.props.author}</p>
+            <h4 id="author">-{this.props.author}</h4>
           </div>
         </div>
       </div>
