@@ -1,19 +1,62 @@
 $color-black: #000000;
 $color-white: white;
 $color-grey: #888888;
-$font-header: 'Patrick Hand SC', cursive;
-$font-quote: 'Alegreya Sans SC', sans-serif;
+$color-wheat: #d2ae5d;
+$font-header: "Patrick Hand SC", cursive;
+$font-quote: "Alegreya Sans SC", sans-serif;
 $border-style: 1px solid red;
 
+body,
+html {
+  background-color: rgb(93, 188, 210);
+  background-image: url(../img/bg_zen.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: luminosity;
+  height: 100%;
+}
+
 .container {
-  border: $border-style;
+  // border: $border-style;
   text-align: center;
   font-family: $font-quote;
+
   header {
-    background-color: $color-grey;
     font-family: $font-header;
+    height: 200px;
+    padding-top: 25px;
+    margin-bottom: 50px;
+    h1 {
+      color: $color-white;
+      font-size: 5em;
+      text-shadow: 5px 5px $color-wheat;
+    }
+    h2 {
+      color: $color-white;
+      text-shadow: 2px 2px $color-wheat;
+    }
   }
-  h1 {
-    font-size: 3em;
+
+  button {
+    font-family: $font-header;
+    font-size: 1.5em;
+    background-color: $color-wheat;
+    margin-top: 20px;
+  }
+
+  #quote-box {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 50px;
+    border-radius: 25px;
+    #text {
+      position: relative;
+      font-size: 2.5em;
+    }
+    #author {
+      position: relative;
+      font-size: 1.5em;
+      font-style: italic;
+    }
   }
 }
