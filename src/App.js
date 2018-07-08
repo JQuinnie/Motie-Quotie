@@ -41,19 +41,19 @@ class App extends React.Component {
       <div className="App container">
         <header className="App-header">
           <h1 className="App-title">Welcome to Motie-Quotie</h1>
-          <h3>A motivational quote for your every day needs</h3>
+          <h2>A motivational quote for your every day needs</h2>
         </header>
         <QuoteBox quote={this.state.quote} author={this.state.author} />
         <button
           type="button"
-          className="btn btn-success"
+          className="btn btn-light"
           id="new-quote"
           onClick={this.fetchQuote}
         >
           New Quote
         </button>
         <a href="http://www.twitter.com/intent/tweet">
-          <button type="button" className="btn btn-primary" id="tweet-quote">
+          <button type="button" className="btn btn-light" id="tweet-quote">
             Tweet Quote
           </button>
         </a>
