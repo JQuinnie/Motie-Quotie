@@ -12,12 +12,7 @@ $border-style: 1px solid red;
   }
 }
 @mixin for-tablet {
-  @media (min-width: 600px) {
-    @content;
-  }
-}
-@mixin for-desktop {
-  @media (min-width: 1200px) {
+  @media (min-width: 599px) and (max-width: 1200px) {
     @content;
   }
 }
@@ -40,16 +35,17 @@ html {
 
   header {
     font-family: $font-header;
-    height: 200px;
-    padding-top: 25px;
+    height: 250px;
+    padding-top: 50px;
     margin-bottom: 50px;
     h1 {
       color: $color-white;
-      font-size: 5em;
+      font-size: 6em;
       text-shadow: 5px 5px $color-wheat;
     }
     h2 {
       color: $color-white;
+      font-size: 2.5em;
       text-shadow: 2px 2px $color-wheat;
     }
 
@@ -65,7 +61,6 @@ html {
     }
 
     @include for-tablet {
-      padding-top: 50px;
       h1 {
         font-size: 4.5em;
         text-shadow: 4px 4px $color-wheat;
