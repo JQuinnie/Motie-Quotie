@@ -63,6 +63,17 @@ html {
         text-shadow: 1px 1px $color-wheat;
       }
     }
+
+    @include for-tablet {
+      padding-top: 50px;
+      h1 {
+        font-size: 4.5em;
+        text-shadow: 4px 4px $color-wheat;
+      }
+      h2 {
+        font-size: 2em;
+      }
+    }
   }
 
   button {

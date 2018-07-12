@@ -30,6 +30,14 @@ html {
       .container header h2 {
         font-size: 1.5em;
         text-shadow: 1px 1px #d2ae5d; } }
+    @media (min-width: 600px) {
+      .container header {
+        padding-top: 50px; }
+        .container header h1 {
+          font-size: 4.5em;
+          text-shadow: 4px 4px #d2ae5d; }
+        .container header h2 {
+          font-size: 2em; } }
   .container button {
     font-family: "Patrick Hand SC", cursive;
     font-size: 1.5em;
