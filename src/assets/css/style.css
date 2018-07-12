@@ -23,6 +23,13 @@ html {
     .container header h2 {
       color: white;
       text-shadow: 2px 2px #d2ae5d; }
+    @media (max-width: 599px) {
+      .container header h1 {
+        font-size: 3.5em;
+        text-shadow: 3px 3px #d2ae5d; }
+      .container header h2 {
+        font-size: 1.5em;
+        text-shadow: 1px 1px #d2ae5d; } }
   .container button {
     font-family: "Patrick Hand SC", cursive;
     font-size: 1.5em;
@@ -39,3 +46,11 @@ html {
       position: relative;
       font-size: 1.5em;
       font-style: italic; }
+    @media (max-width: 599px) {
+      .container .quote-area {
+        padding: 25px;
+        border-radius: 10px; }
+        .container .quote-area #text {
+          font-size: 1.5em; }
+        .container .quote-area #author {
+          font-size: 1em; } }

@@ -6,6 +6,22 @@ $font-header: "Patrick Hand SC", cursive;
 $font-quote: "Alegreya Sans SC", sans-serif;
 $border-style: 1px solid red;
 
+@mixin for-phone {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+@mixin for-tablet {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+@mixin for-desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
 body,
 html {
   background-color: rgb(93, 188, 210);
@@ -36,6 +52,17 @@ html {
       color: $color-white;
       text-shadow: 2px 2px $color-wheat;
     }
+
+    @include for-phone {
+      h1 {
+        font-size: 3.5em;
+        text-shadow: 3px 3px $color-wheat;
+      }
+      h2 {
+        font-size: 1.5em;
+        text-shadow: 1px 1px $color-wheat;
+      }
+    }
   }
 
   button {
@@ -49,6 +76,7 @@ html {
     background-color: rgba(255, 255, 255, 0.5);
     padding: 50px;
     border-radius: 25px;
+
     #text {
       position: relative;
       font-size: 2.5em;
@@ -57,6 +85,18 @@ html {
       position: relative;
       font-size: 1.5em;
       font-style: italic;
+    }
+
+    @include for-phone {
+      padding: 25px;
+      border-radius: 10px;
+
+      #text {
+        font-size: 1.5em;
+      }
+      #author {
+        font-size: 1em;
+      }
     }
   }
 }
