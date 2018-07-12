@@ -40,7 +40,7 @@ class App extends React.Component {
     return (
       <div className="App container">
         <header className="App-header">
-          <h1 className="App-title">Welcome to Motie-Quotie</h1>
+          <h1 className="App-title">Welcome to Motie-Quotie!</h1>
           <h2>A motivational quote for your every day needs</h2>
         </header>
         <QuoteBox
