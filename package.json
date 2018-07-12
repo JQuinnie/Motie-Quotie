@@ -17,7 +17,7 @@
     "scss": "node-sass --watch src/assets/scss -o src/assets/css",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "master -d build"
   },
   "devDependencies": {
     "gh-pages": "^1.2.0"
