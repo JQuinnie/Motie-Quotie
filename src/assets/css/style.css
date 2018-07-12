@@ -31,7 +31,7 @@ html {
       .container header h2 {
         font-size: 1.5em;
         text-shadow: 1px 1px #d2ae5d; } }
-    @media (min-width: 599px) and (max-width: 1200px) {
+    @media (min-width: 600px) and (max-width: 1200px) {
       .container header h1 {
         font-size: 4.5em;
         text-shadow: 4px 4px #d2ae5d; }
